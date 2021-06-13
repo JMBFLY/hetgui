@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet"> <!--글꼴-->
+    <title>Project</title>
+</head>
+<body>
+    <div class="container">
+        <div id="menubar">
+            <object data="./svg/hamberger.svg" type="image/svg+xml"></object>
+        </div>
+        <header>
+            <h2>HETGUI</h2>
+            <nav>
+            <ul>
+                <li><button class="click_user" type="button" onclick="location.href='database.html'"></button></li>
+                <li><button class="click_favorite" type="button" onclick="location.href='database.html'"></button></li>
+                <li><button class="click_setting" type="button" onclick="location.href='database.html'"></button></li>
+            </ul>
+            </nav>
+        </header>
+        <main>
+            <div id="pin">
+                <img src="./map/floor1.svg" alt="map">
+            </div>
+            <div id="btn">
+            </div>
+        </main>
+        <aside>
+            <nav>
+            <ul>
+                <li><button class="side_map" type="button" onclick="site(0)"></button></li>
+                <li><button class="side_chart" type="button" onclick="site(1)"></button></li>
+                <li><button class="side_server" type="button" onclick="site(2)"></button></li>
+            </ul>
+            </nav>
+        </aside>
+        <div id="content1">
+        </div>
+        <div id="content2">
+        </div>
+        <footer>
+            <object data="./svg/logo.svg" type="image/svg+xml"></object>
+            <p>This page is Chosun-University Capston Design page.<br> Designed by Hetgui Team.</p>
+        </footer>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

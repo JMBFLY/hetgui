@@ -1,0 +1,286 @@
+:root {
+    --main-radius: 5px;
+    --main-padding: 5px;
+
+    --main-pptred: #EF4136;
+    --main-pptyellow: #FFDE00;
+    --main-white: #FFFFFF;
+    --main-black: #000000;
+    
+    --main-background: #ECEBEB;
+    --main-hamberger: #FEF2CD;
+    --main-footertext: #FC564E;
+    --main-borderline: #707070;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Handlee";
+    background: var(--main-background);
+}
+
+.container {
+    display: grid;
+    margin-top: 2.5vh;
+    height: 95vh;
+    grid-template-columns: minmax(60px, 0.2fr) 1.5fr 1.2fr 0.8fr;
+    grid-template-rows: 0.1fr 1.2fr 0.5fr 0.2fr;
+    grid-template-areas:
+        "menubar header header header"
+        "sidebar main main main"
+        "sidebar content1 content2 content2"
+        "footer footer footer footer";
+    grid-gap: 0rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-align: center;
+}
+
+#menubar {
+    background: var(--main-pptyellow);
+    grid-area: menubar;
+    border-top-left-radius: 20px;
+    border-style:outset;
+    border-color: var(--main-borderline);
+    border-width: 2px;
+    padding-top: var(--main-padding);
+}
+
+#menubar object {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+header {
+    background: var(--main-pptred);
+    grid-area: header;
+    border-top-right-radius: 20px;
+    border-style:outset;
+    border-color: var(--main-borderline);
+    border-width: 2px;
+    padding-top: var(--main-padding);
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header ul {
+    display: flex;
+    align-items:center;
+}
+
+header h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--main-white);
+    cursor: pointer;
+    margin-right: auto;
+    padding-left: 10px;
+}
+
+header nav {
+    list-style: none;
+}
+
+header nav li {
+    display: inline-block;
+    width: 2rem;
+    margin-inline: 10px;
+}
+
+header nav li button {
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    border: none;
+}
+
+.click_user {
+    background: url(./svg/user.svg);
+}
+
+.click_favorite {
+    background: url(./svg/favorite.svg);
+}
+
+.click_setting {
+    background: url(./svg/setting.svg);
+}
+
+header nav li button:hover {
+    background-color: var(--main-pptyellow);
+}
+
+main {
+    background: var(--main-background);
+    grid-area: main;
+    border-style:outset;
+    border-color: var(--main-borderline);
+    border-width: 2px;
+    padding-top: var(--main-padding);
+}
+
+main div {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main div button {
+    height: 50px;
+    width: 50px;
+    margin-top: 20px;
+}
+
+img {
+    display: block;
+    width: calc(100% - 50px);
+    max-width: 1200px;
+    height: auto;
+    margin: auto;
+    padding-top: 10px;
+}
+
+img path:hover {
+    fill:#FFFFFF;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+/* main span {
+    position: relative;
+    float: left;
+    clear: left;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+
+    background-color: var(--main-pptred);
+
+    animation: highlight 1s linear infinite;
+}
+
+.marker1 {
+    left: 75%;
+    top: 50%;
+}
+.marker2 {
+    left: 30%;
+    top: 45%;
+}
+
+@keyframes highlight{
+    100%{
+        transform: scale(3.2);
+        opacity: 0;
+    }
+} */
+
+aside {
+    background: var(--main-pptyellow);
+    grid-area: sidebar;
+    border-style:outset;
+    border-color: var(--main-borderline);
+    border-width: 2px;
+    padding-top: var(--main-padding);
+
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+}
+
+aside li {
+    padding-top: 20px;
+}
+
+aside nav li button {
+    width: 3rem;
+    height: 3rem;
+    background-size: contain;
+    border: none;
+}
+
+.side_map {
+    background: url(./svg/map.svg);
+}
+
+.side_chart {
+    background: url(./svg/chart.svg);
+}
+
+.side_server {
+    background: url(./svg/server.svg);
+}
+
+#content1 {
+    background: var(--main-white);
+    grid-area: content1;
+    border-style:outset;
+    border-color: var(--main-borderline);
+    border-width: 2px;
+    padding-top: var(--main-padding);
+}
+
+#content1 h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--main-black);
+    padding: 5px 10px;
+    text-align: left;
+}
+
+#content2 {
+    background: var(--main-white);
+    grid-area: content2;
+    border-style:outset;
+    border-color: var(--main-borderline);
+    border-width: 2px;
+    padding-top: var(--main-padding);
+}
+
+#content2 h3 {
+    font-size: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--main-black);
+    padding: 15px 20px;
+    text-align: left;
+}
+
+footer {
+    background: var(--main-black);
+    grid-area: footer;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-top: var(--main-padding);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+}
+
+footer object {
+    width: calc(100% - 100px);
+    max-width: 300px;
+    padding-bottom: 10px;
+}
+
+footer p {
+    color: var(--main-white);
+    font-size: 1rem;
+}
